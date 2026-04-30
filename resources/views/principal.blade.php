@@ -239,7 +239,7 @@
     <main class="container">
         <section class="hero-card">
             <div>
-                <h2>Cuidado com diabetes perto de voc&ecirc;</h2>
+                <h2>Cuidado com hipertensão e diabetes perto de voc&ecirc;</h2>
                 <p>Veja UBS, hospitais, orienta&ccedil;&otilde;es, v&iacute;deos, controle di&aacute;rio e sinais de alerta em um s&oacute; lugar.</p>
             </div>
             <div class="hero-img"><i class="fas fa-stethoscope"></i></div>
