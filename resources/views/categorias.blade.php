@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diabetes - Guia do Cidadao</title>
+    <title>Diabetes - Guia do Cidad&atilde;o</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -81,8 +81,8 @@
     </a>
 
     <section class="top-card">
-        <h2>Area de apoio a diabetes</h2>
-        <p>Escolha uma opcao para encontrar atendimento, aprender cuidados basicos e saber quando procurar ajuda.</p>
+        <h2>&Aacute;rea de apoio ao diabetes</h2>
+        <p>Escolha uma op&ccedil;&atilde;o para encontrar atendimento, aprender cuidados b&aacute;sicos e saber quando procurar ajuda.</p>
     </section>
 
     <div class="category-grid">
@@ -90,7 +90,7 @@
             <div class="icon-box bg-green"><i class="fas fa-hospital-user"></i></div>
             <div class="info">
                 <h3>UBS e hospitais</h3>
-                <p>Locais de atendimento com telefone e localizacao pelo mapa.</p>
+                <p>Locais de atendimento com telefone e localiza&ccedil;&atilde;o pelo mapa.</p>
             </div>
         </a>
 
@@ -98,31 +98,31 @@
             <div class="icon-box bg-teal"><i class="fas fa-clipboard-check"></i></div>
             <div class="info">
                 <h3>Meu controle</h3>
-                <p>Anote glicemia, pressao, remedios, sintomas e proxima consulta.</p>
+                <p>Anote glicemia, press&atilde;o, rem&eacute;dios, sintomas e pr&oacute;xima consulta.</p>
             </div>
         </a>
 
         <a href="https://www.youtube.com/results?search_query=cuidados+com+diabetes+tipo+1+tipo+2" target="_blank" class="category-card">
             <div class="icon-box bg-blue"><i class="fas fa-circle-play"></i></div>
             <div class="info">
-                <h3>Videos sobre diabetes</h3>
-                <p>Explicacoes simples sobre glicemia, alimentacao, remedios e prevencao.</p>
+                <h3>V&iacute;deos sobre diabetes</h3>
+                <p>Explica&ccedil;&otilde;es simples sobre glicemia, alimenta&ccedil;&atilde;o, rem&eacute;dios e preven&ccedil;&atilde;o.</p>
             </div>
         </a>
 
         <a href="{{ route('alimentacao_glicemia', [], false) }}" class="category-card">
             <div class="icon-box bg-yellow"><i class="fas fa-utensils"></i></div>
             <div class="info">
-                <h3>Alimentacao e glicemia</h3>
-                <p>Dicas visuais para montar pratos mais seguros e controlar o acucar.</p>
+                <h3>Alimenta&ccedil;&atilde;o e glicemia</h3>
+                <p>Dicas visuais para montar pratos mais seguros e controlar o a&ccedil;&uacute;car.</p>
             </div>
         </a>
 
         <a href="{{ route('sinais_alerta', [], false) }}" class="category-card">
             <div class="icon-box bg-red"><i class="fas fa-kit-medical"></i></div>
             <div class="info">
-                <h3>Emergencia e sinais de alerta</h3>
-                <p>Confusao, desmaio, ferida grave ou mal-estar intenso precisam de atendimento.</p>
+                <h3>Emerg&ecirc;ncia e sinais de alerta</h3>
+                <p>Confus&atilde;o, desmaio, ferida grave ou mal-estar intenso precisam de atendimento.</p>
             </div>
         </a>
     </div>

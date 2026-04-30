@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu controle - Guia do Cidadao</title>
+    <title>Meu controle - Guia do Cidad&atilde;o</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -204,12 +204,12 @@
             <i class="fas fa-arrow-left"></i> Voltar
         </a>
         <h1>Meu controle</h1>
-        <p>Anote informacoes importantes do dia. Os dados ficam salvos neste navegador para voce consultar depois.</p>
+        <p>Anote informa&ccedil;&otilde;es importantes do dia. Os dados ficam salvos neste navegador para voc&ecirc; consultar depois.</p>
     </header>
 
     <main>
         <section class="card notice">
-            Este espaco ajuda na organizacao, mas nao substitui acompanhamento na UBS. Leve suas anotacoes para consultas.
+            Este espa&ccedil;o ajuda na organiza&ccedil;&atilde;o, mas n&atilde;o substitui acompanhamento na UBS. Leve suas anota&ccedil;&otilde;es para consultas.
         </section>
 
         <section class="card">
@@ -222,19 +222,19 @@
                     <label>Glicemia
                         <input type="text" name="glicemia" placeholder="Ex: 120 mg/dL">
                     </label>
-                    <label>Pressao
+                    <label>Press&atilde;o
                         <input type="text" name="pressao" placeholder="Ex: 12x8">
                     </label>
-                    <label>Remedios tomados
+                    <label>Rem&eacute;dios tomados
                         <input type="text" name="remedios" placeholder="Ex: Metformina, insulina">
                     </label>
-                    <label>Proxima consulta
+                    <label>Pr&oacute;xima consulta
                         <input type="date" name="consulta">
                     </label>
                     <label>Sintomas
                         <input type="text" name="sintomas" placeholder="Ex: tontura, sede, nenhum">
                     </label>
-                    <label class="full">Observacoes
+                    <label class="full">Observa&ccedil;&otilde;es
                         <textarea name="observacoes" placeholder="Escreva algo importante para lembrar na consulta"></textarea>
                     </label>
                 </div>
@@ -246,13 +246,13 @@
         </section>
 
         <section class="card">
-            <h2><i class="fas fa-clipboard-list"></i> Ultimo registro salvo</h2>
+            <h2><i class="fas fa-clipboard-list"></i> &Uacute;ltimo registro salvo</h2>
             <div class="summary" id="summary"></div>
         </section>
     </main>
 
     <nav class="bottom-nav">
-        <a href="{{ route('principal', [], false) }}" class="nav-item"><i class="fas fa-home"></i><span>Inicio</span></a>
+        <a href="{{ route('principal', [], false) }}" class="nav-item"><i class="fas fa-home"></i><span>In&iacute;cio</span></a>
         <a href="{{ route('meu_controle', [], false) }}" class="nav-item active"><i class="fas fa-clipboard-check"></i><span>Controle</span></a>
         <a href="{{ route('detalhes_saude', [], false) }}" class="nav-item"><i class="fas fa-map-pin"></i><span>UBS</span></a>
     </nav>
@@ -287,11 +287,11 @@
         const labels = {
             data: "Data",
             glicemia: "Glicemia",
-            pressao: "Pressao",
-            remedios: "Remedios",
-            consulta: "Proxima consulta",
+            pressao: "Press&atilde;o",
+            remedios: "Rem&eacute;dios",
+            consulta: "Pr&oacute;xima consulta",
             sintomas: "Sintomas",
-            observacoes: "Observacoes"
+            observacoes: "Observa&ccedil;&otilde;es"
         };
 
         function today() {
@@ -317,12 +317,12 @@
         function renderSummary(data) {
             const hasData = Object.values(data).some(Boolean);
             if (!hasData) {
-                summary.innerHTML = '<div class="summary-item"><strong>Nenhum registro ainda</strong><span>Preencha o formulario e toque em salvar.</span></div>';
+                summary.innerHTML = '<div class="summary-item"><strong>Nenhum registro ainda</strong><span>Preencha o formul&aacute;rio e toque em salvar.</span></div>';
                 return;
             }
 
             summary.innerHTML = Object.keys(labels).map((key) => {
-                const value = data[key] || "Nao informado";
+                const value = data[key] || "N&atilde;o informado";
                 return `<div class="summary-item"><strong>${labels[key]}</strong><span>${value}</span></div>`;
             }).join("");
         }

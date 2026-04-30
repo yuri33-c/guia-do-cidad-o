@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UBS e atendimento - Guia do Cidadao</title>
+    <title>UBS e atendimento - Guia do Cidad&atilde;o</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -182,7 +182,7 @@
         <a href="{{ route('principal', [], false) }}"><i class="fas fa-arrow-left"></i></a>
         <div>
             <h1>UBS e atendimento</h1>
-            <p>Locais de saude em Parauapebas</p>
+            <p>Locais de sa&uacute;de em Parauapebas</p>
         </div>
     </div>
 
@@ -190,7 +190,7 @@
         <section class="banner">
             <div>
                 <h2>Procure acompanhamento na UBS</h2>
-                <p>A pessoa com diabetes precisa acompanhar glicemia, alimentacao, medicamentos e cuidados com os pes.</p>
+                <p>A pessoa com diabetes precisa acompanhar glicemia, alimenta&ccedil;&atilde;o, medicamentos e cuidados com os p&eacute;s.</p>
             </div>
             <div class="banner-icon"><i class="fas fa-hospital-user"></i></div>
         </section>
@@ -205,14 +205,14 @@
         </div>
 
         <div class="info-box">
-            <strong>Atencao:</strong> este guia ajuda com informacoes e localizacao, mas nao substitui consulta medica. Em caso de desmaio, confusao mental, falta de ar, feridas graves ou mal-estar intenso, procure atendimento imediatamente.
+            <strong>Aten&ccedil;&atilde;o:</strong> este guia ajuda com informa&ccedil;&otilde;es e localiza&ccedil;&atilde;o, mas n&atilde;o substitui consulta m&eacute;dica. Em caso de desmaio, confus&atilde;o mental, falta de ar, feridas graves ou mal-estar intenso, procure atendimento imediatamente.
         </div>
 
         <h2 class="section-title">UBS e locais de atendimento</h2>
 
         <section class="card">
             <h3>Hospital Municipal de Parauapebas</h3>
-            <div class="tags"><span class="tag red">Urgencia e hospital</span><span class="tag blue">Primavera</span></div>
+            <div class="tags"><span class="tag red">Urg&ecirc;ncia e hospital</span><span class="tag blue">Primavera</span></div>
             <p>R. A, 1262 - Primavera, Parauapebas - PA</p>
             <div class="buttons">
                 <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/Hospital+Municipal+de+Parauapebas+R.+A+1262+Primavera"><i class="fas fa-location-dot"></i> Ver no mapa</a>
@@ -221,52 +221,52 @@
 
         <section class="card">
             <h3>UBS Tropical I</h3>
-            <div class="tags"><span class="tag">Acompanhamento basico</span><span class="tag blue">Tropical</span></div>
-            <p>Av. Jatoba, Parauapebas - PA</p>
+            <div class="tags"><span class="tag">Acompanhamento b&aacute;sico</span><span class="tag blue">Tropical</span></div>
+            <p>Av. Jatob&aacute;, Parauapebas - PA</p>
             <div class="buttons">
-                <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Tropical+I+Av.+Jatoba+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
+                <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Tropical+I+Av.+Jatob&aacute;+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
             </div>
         </section>
 
         <section class="card">
             <h3>UBS Novo Brasil</h3>
-            <div class="tags"><span class="tag">Consulta e orientacao</span><span class="tag blue">Amazonia</span></div>
-            <p>Av. Salvador Flauzino, 31 - Qd 37 - Amazonia, Parauapebas - PA</p>
+            <div class="tags"><span class="tag">Consulta e orienta&ccedil;&atilde;o</span><span class="tag blue">Amaz&ocirc;nia</span></div>
+            <p>Av. Salvador Flauzino, 31 - Qd 37 - Amaz&ocirc;nia, Parauapebas - PA</p>
             <div class="buttons">
-                <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Novo+Brasil+Av.+Salvador+Flauzino+31+Amazonia+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
+                <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Novo+Brasil+Av.+Salvador+Flauzino+31+Amaz&ocirc;nia+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
             </div>
         </section>
 
         <section class="card">
             <h3>UBS Altamira</h3>
-            <div class="tags"><span class="tag">Atendimento proximo</span><span class="tag blue">Altamira</span></div>
-            <p>R. Pedro Alvares Cabral, Parauapebas - PA</p>
+            <div class="tags"><span class="tag">Atendimento pr&oacute;ximo</span><span class="tag blue">Altamira</span></div>
+            <p>R. Pedro &Aacute;lvares Cabral, Parauapebas - PA</p>
             <div class="buttons">
-                <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Altamira+Rua+Pedro+Alvares+Cabral+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
+                <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Altamira+Rua+Pedro+&Aacute;lvares+Cabral+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
             </div>
         </section>
 
         <section class="card">
-            <h3>UBS Jardim Canada</h3>
-            <div class="tags"><span class="tag">Unidade basica</span><span class="tag blue">Jardim Canada</span></div>
-            <p>Rua 77, QD Especial - Jardim Canada, Parauapebas - PA</p>
+            <h3>UBS Jardim Canad&aacute;</h3>
+            <div class="tags"><span class="tag">Unidade b&aacute;sica</span><span class="tag blue">Jardim Canad&aacute;</span></div>
+            <p>Rua 77, QD Especial - Jardim Canad&aacute;, Parauapebas - PA</p>
             <div class="buttons">
                 <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Jardim+Canada+Rua+77+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
             </div>
         </section>
 
         <section class="card">
-            <h3>Policlinica Municipal de Parauapebas</h3>
+            <h3>Policl&iacute;nica Municipal de Parauapebas</h3>
             <div class="tags"><span class="tag">Especialidades</span><span class="tag blue">Centro</span></div>
             <p>Av. A, Parauapebas - PA</p>
             <div class="buttons">
-                <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/Policlinica+Municipal+de+Parauapebas+Av.+A"><i class="fas fa-location-dot"></i> Ver no mapa</a>
+                <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/Policl&iacute;nica+Municipal+de+Parauapebas+Av.+A"><i class="fas fa-location-dot"></i> Ver no mapa</a>
             </div>
         </section>
 
         <section class="card">
             <h3>UBS Guanabara</h3>
-            <div class="tags"><span class="tag">Acompanhamento basico</span><span class="tag blue">Guanabara</span></div>
+            <div class="tags"><span class="tag">Acompanhamento b&aacute;sico</span><span class="tag blue">Guanabara</span></div>
             <p>R. Manoel Garrincha, 438 - Guanabara, Parauapebas - PA</p>
             <div class="buttons">
                 <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Guanabara+Rua+Manoel+Garrincha+438+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
@@ -275,7 +275,7 @@
 
         <section class="card">
             <h3>UBS Bairro da Paz</h3>
-            <div class="tags"><span class="tag">Unidade basica</span><span class="tag blue">Da Paz</span></div>
+            <div class="tags"><span class="tag">Unidade b&aacute;sica</span><span class="tag blue">Da Paz</span></div>
             <p>R. Santa Maria, 182 - Da Paz, Parauapebas - PA</p>
             <div class="buttons">
                 <a class="btn btn-map" target="_blank" href="https://www.google.com/maps/search/UBS+Bairro+da+Paz+Rua+Santa+Maria+182+Parauapebas+PA"><i class="fas fa-location-dot"></i> Ver no mapa</a>
@@ -284,7 +284,7 @@
     </main>
 
     <nav class="bottom-nav">
-        <a href="{{ route('principal', [], false) }}" class="nav-item"><i class="fas fa-home"></i><span>Inicio</span></a>
+        <a href="{{ route('principal', [], false) }}" class="nav-item"><i class="fas fa-home"></i><span>In&iacute;cio</span></a>
         <a href="{{ route('meu_controle', [], false) }}" class="nav-item"><i class="fas fa-clipboard-check"></i><span>Controle</span></a>
         <a href="{{ route('detalhes_saude', [], false) }}" class="nav-item active"><i class="fas fa-map-pin"></i><span>UBS</span></a>
     </nav>

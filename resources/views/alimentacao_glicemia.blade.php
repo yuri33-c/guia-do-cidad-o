@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alimentacao e glicemia - Guia do Cidadao</title>
+    <title>Alimenta&ccedil;&atilde;o e glicemia - Guia do Cidad&atilde;o</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #0f766e; --blue: #2563eb; --text: #1f2937; --muted: #64748b; }
@@ -40,8 +40,8 @@
 <body>
     <header class="page-header">
         <a href="{{ route('principal', [], false) }}" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
-        <h1>Alimentacao e glicemia</h1>
-        <p>Orientacoes simples para montar refeicoes mais seguras e reduzir picos de acucar no sangue.</p>
+        <h1>Alimenta&ccedil;&atilde;o e glicemia</h1>
+        <p>Orienta&ccedil;&otilde;es simples para montar refei&ccedil;&otilde;es mais seguras e reduzir picos de a&ccedil;&uacute;car no sangue.</p>
     </header>
 
     <main>
@@ -49,8 +49,8 @@
             <h2><i class="fas fa-plate-wheat"></i> Como montar o prato</h2>
             <div class="plate">
                 <div class="plate-part vegetables"><strong>1/2 do prato: verduras e legumes</strong>Alface, couve, tomate, pepino, cenoura, abobrinha e outros vegetais.</div>
-                <div class="plate-part protein"><strong>1/4 do prato: proteina</strong>Frango, peixe, ovo, carne magra, feijao, lentilha ou grao-de-bico.</div>
-                <div class="plate-part carb"><strong>1/4 do prato: carboidrato</strong>Arroz, macarrao, batata, macaxeira, milho ou farinha em porcao controlada.</div>
+                <div class="plate-part protein"><strong>1/4 do prato: prote&iacute;na</strong>Frango, peixe, ovo, carne magra, feij&atilde;o, lentilha ou gr&atilde;o-de-bico.</div>
+                <div class="plate-part carb"><strong>1/4 do prato: carboidrato</strong>Arroz, macarr&atilde;o, batata, macaxeira, milho ou farinha em por&ccedil;&atilde;o controlada.</div>
             </div>
         </section>
 
@@ -58,61 +58,37 @@
             <h2><i class="fas fa-circle-check"></i> Boas escolhas</h2>
             <ul>
                 <li>Verduras e legumes todos os dias.</li>
-                <li>Frutas inteiras em vez de sucos adocados.</li>
-                <li>Agua no lugar de refrigerante.</li>
-                <li>Feijao, ovos, peixe e frango como apoio nas refeicoes.</li>
+                <li>Frutas inteiras em vez de sucos ado&ccedil;ados.</li>
+                <li>&Aacute;gua no lugar de refrigerante.</li>
+                <li>Feij&atilde;o, ovos, peixe e frango como apoio nas refei&ccedil;&otilde;es.</li>
             </ul>
         </section>
 
         <section class="card">
             <h2><i class="fas fa-ban"></i> Evite excesso</h2>
             <ul>
-                <li>Refrigerante, suco de caixinha e bebidas adocadas.</li>
+                <li>Refrigerante, suco de caixinha e bebidas ado&ccedil;adas.</li>
                 <li>Doces, bolos, biscoitos recheados e sobremesas frequentes.</li>
-                <li>Grandes porcoes de arroz, macarrao, pao branco e farinha.</li>
+                <li>Grandes por&ccedil;&otilde;es de arroz, macarr&atilde;o, p&atilde;o branco e farinha.</li>
             </ul>
         </section>
 
         <section class="card">
             <h2><i class="fas fa-droplet"></i> Acompanhe a glicemia</h2>
-            <p>Se voce usa aparelho, anote os valores e leve nas consultas. Nao pare remedios ou insulina por conta propria.</p>
+            <p>Se voc&ecirc; usa aparelho, anote os valores e leve nas consultas. N&atilde;o pare rem&eacute;dios ou insulina por conta pr&oacute;pria.</p>
         </section>
 
         <div class="action-grid">
             <a href="{{ route('detalhes_saude', [], false) }}" class="action-btn blue"><i class="fas fa-hospital-user"></i> Ver UBS</a>
             <a href="{{ route('sinais_alerta', [], false) }}" class="action-btn green"><i class="fas fa-triangle-exclamation"></i> Sinais de alerta</a>
-            <a href="https://www.youtube.com/results?search_query=diabetes+alimentacao+glicemia" target="_blank" class="action-btn blue"><i class="fas fa-video"></i> Videos</a>
+            <a href="https://www.youtube.com/results?search_query=diabetes+alimentacao+glicemia" target="_blank" class="action-btn blue"><i class="fas fa-video"></i> V&iacute;deos</a>
         </div>
     </main>
 
     <nav class="bottom-nav">
-        <a href="{{ route('principal', [], false) }}" class="nav-item"><i class="fas fa-home"></i><span>Inicio</span></a>
-        <a href="{{ route('alimentacao_glicemia', [], false) }}" class="nav-item active"><i class="fas fa-apple-whole"></i><span>Alimentacao</span></a>
+        <a href="{{ route('principal', [], false) }}" class="nav-item"><i class="fas fa-home"></i><span>In&iacute;cio</span></a>
+        <a href="{{ route('alimentacao_glicemia', [], false) }}" class="nav-item active"><i class="fas fa-apple-whole"></i><span>Alimenta&ccedil;&atilde;o</span></a>
         <a href="{{ route('detalhes_saude', [], false) }}" class="nav-item"><i class="fas fa-map-pin"></i><span>UBS</span></a>
     </nav>
-    <script>
-        if ("scrollRestoration" in history) {
-            history.scrollRestoration = "manual";
-        }
-
-        function forceTop() {
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
-            window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        }
-
-        forceTop();
-        window.addEventListener("DOMContentLoaded", forceTop);
-        window.addEventListener("load", () => {
-            forceTop();
-            setTimeout(forceTop, 100);
-            setTimeout(forceTop, 400);
-        });
-        window.addEventListener("pageshow", () => {
-            forceTop();
-            setTimeout(forceTop, 100);
-            setTimeout(forceTop, 400);
-        });
-    </script>
 </body>
 </html>

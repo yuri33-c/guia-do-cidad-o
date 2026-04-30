@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinais de alerta - Guia do Cidadao</title>
+    <title>Sinais de alerta - Guia do Cidad&atilde;o</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #0f766e; --red: #dc2626; --blue: #2563eb; --text: #1f2937; --muted: #64748b; }
@@ -34,27 +34,27 @@
 <body>
     <header class="page-header">
         <a href="{{ route('principal', [], false) }}" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
-        <h1>Emergencia e sinais de alerta</h1>
-        <p>Saiba reconhecer sintomas que precisam de atencao rapida em pessoas com diabetes.</p>
+        <h1>Emerg&ecirc;ncia e sinais de alerta</h1>
+        <p>Saiba reconhecer sintomas que precisam de aten&ccedil;&atilde;o r&aacute;pida em pessoas com diabetes.</p>
     </header>
     <main>
         <section class="urgent-box">
             <h2><i class="fas fa-triangle-exclamation"></i> Procure atendimento imediatamente</h2>
-            <p>Desmaio, confusao mental, falta de ar, dor no peito, sonolencia extrema, vomitos persistentes ou ferida grave devem ser avaliados com urgencia.</p>
+            <p>Desmaio, confus&atilde;o mental, falta de ar, dor no peito, sonol&ecirc;ncia extrema, v&ocirc;mitos persistentes ou ferida grave devem ser avaliados com urg&ecirc;ncia.</p>
         </section>
         <section class="grid">
-            <div class="card"><h3><i class="fas fa-arrow-down"></i> Possivel glicemia baixa</h3><ul><li>Tremedeira, suor frio, fome forte ou fraqueza.</li><li>Tontura, palpitacao, dor de cabeca ou visao embacada.</li><li>Confusao, fala enrolada, desmaio ou convulsao.</li></ul></div>
-            <div class="card"><h3><i class="fas fa-arrow-up"></i> Possivel glicemia alta</h3><ul><li>Muita sede, boca seca e urinar muitas vezes.</li><li>Cansaco intenso, visao embacada ou perda de peso sem explicacao.</li><li>Nausea, vomitos, dor abdominal ou respiracao diferente.</li></ul></div>
-            <div class="card"><h3><i class="fas fa-bandage"></i> Feridas e pes</h3><ul><li>Corte, bolha, rachadura ou ferida que nao cicatriza.</li><li>Vermelhidao, inchaco, pus, mau cheiro ou dor forte.</li><li>Perda de sensibilidade nos pes.</li></ul></div>
-            <div class="card"><h3><i class="fas fa-notes-medical"></i> O que levar</h3><ul><li>Receitas, remedios e insulina.</li><li>Anotacoes da glicemia.</li><li>Informar quando os sintomas comecaram.</li></ul></div>
+            <div class="card"><h3><i class="fas fa-arrow-down"></i> Poss&iacute;vel glicemia baixa</h3><ul><li>Tremedeira, suor frio, fome forte ou fraqueza.</li><li>Tontura, palpita&ccedil;&atilde;o, dor de cabe&ccedil;a ou vis&atilde;o emba&ccedil;ada.</li><li>Confus&atilde;o, fala enrolada, desmaio ou convuls&atilde;o.</li></ul></div>
+            <div class="card"><h3><i class="fas fa-arrow-up"></i> Poss&iacute;vel glicemia alta</h3><ul><li>Muita sede, boca seca e urinar muitas vezes.</li><li>Cansa&ccedil;o intenso, vis&atilde;o emba&ccedil;ada ou perda de peso sem explica&ccedil;&atilde;o.</li><li>N&aacute;usea, v&ocirc;mitos, dor abdominal ou respira&ccedil;&atilde;o diferente.</li></ul></div>
+            <div class="card"><h3><i class="fas fa-bandage"></i> Feridas e p&eacute;s</h3><ul><li>Corte, bolha, rachadura ou ferida que n&atilde;o cicatriza.</li><li>Vermelhid&atilde;o, incha&ccedil;o, pus, mau cheiro ou dor forte.</li><li>Perda de sensibilidade nos p&eacute;s.</li></ul></div>
+            <div class="card"><h3><i class="fas fa-notes-medical"></i> O que levar</h3><ul><li>Receitas, rem&eacute;dios e insulina.</li><li>Anota&ccedil;&otilde;es da glicemia.</li><li>Informar quando os sintomas come&ccedil;aram.</li></ul></div>
         </section>
         <div class="action-grid">
             <a href="{{ route('detalhes_saude', [], false) }}" class="action-btn red"><i class="fas fa-hospital-user"></i> Ver UBS</a>
-            <a href="{{ route('alimentacao_glicemia', [], false) }}" class="action-btn green"><i class="fas fa-apple-whole"></i> Alimentacao</a>
+            <a href="{{ route('alimentacao_glicemia', [], false) }}" class="action-btn green"><i class="fas fa-apple-whole"></i> Alimenta&ccedil;&atilde;o</a>
         </div>
     </main>
     <nav class="bottom-nav">
-        <a href="{{ route('principal', [], false) }}" class="nav-item"><i class="fas fa-home"></i><span>Inicio</span></a>
+        <a href="{{ route('principal', [], false) }}" class="nav-item"><i class="fas fa-home"></i><span>In&iacute;cio</span></a>
         <a href="{{ route('sinais_alerta', [], false) }}" class="nav-item active"><i class="fas fa-triangle-exclamation"></i><span>Alertas</span></a>
         <a href="{{ route('detalhes_saude', [], false) }}" class="nav-item"><i class="fas fa-map-pin"></i><span>UBS</span></a>
     </nav>

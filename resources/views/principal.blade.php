@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia do Cidadao - Parauapebas</title>
+    <title>Guia do Cidad&atilde;o - Parauapebas</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -232,15 +232,15 @@
 <body>
     <header class="app-header">
         <p><i class="fas fa-location-dot"></i> Parauapebas, PA</p>
-        <h1>GUIA DO CIDADAO</h1>
-        <p class="subtitle">Guia simples para ajudar pessoas com diabetes a encontrar atendimento, informacao e cuidado.</p>
+        <h1>GUIA DO CIDAD&Atilde;O</h1>
+        <p class="subtitle">Guia simples para ajudar pessoas com diabetes a encontrar atendimento, informa&ccedil;&atilde;o e cuidado.</p>
     </header>
 
     <main class="container">
         <section class="hero-card">
             <div>
-                <h2>Cuidado com a diabetes perto de voce</h2>
-                <p>Veja UBS, hospitais, orientacoes, videos, controle diario e sinais de alerta em um so lugar.</p>
+                <h2>Cuidado com diabetes perto de voc&ecirc;</h2>
+                <p>Veja UBS, hospitais, orienta&ccedil;&otilde;es, v&iacute;deos, controle di&aacute;rio e sinais de alerta em um s&oacute; lugar.</p>
             </div>
             <div class="hero-img"><i class="fas fa-stethoscope"></i></div>
         </section>
@@ -250,7 +250,7 @@
                 <div class="card-icon bg-red"><i class="fas fa-map-marker-alt"></i></div>
                 <div class="card-info">
                     <h3>UBS e atendimento</h3>
-                    <p>Unidades de saude com botao de ligacao, bairro, tipo de atendimento e mapa.</p>
+                    <p>Unidades de sa&uacute;de com bot&atilde;o de liga&ccedil;&atilde;o, bairro, tipo de atendimento e mapa.</p>
                 </div>
             </a>
 
@@ -258,23 +258,23 @@
                 <div class="card-icon bg-teal"><i class="fas fa-clipboard-check"></i></div>
                 <div class="card-info">
                     <h3>Meu controle</h3>
-                    <p>Anote glicemia, pressao, remedios, sintomas e proxima consulta.</p>
+                    <p>Anote glicemia, press&atilde;o, rem&eacute;dios, sintomas e pr&oacute;xima consulta.</p>
                 </div>
             </a>
 
             <a href="https://www.youtube.com/results?search_query=cuidados+com+diabetes+tipo+2" target="_blank" class="menu-card">
                 <div class="card-icon bg-blue"><i class="fas fa-play-circle"></i></div>
                 <div class="card-info">
-                    <h3>Videos educativos</h3>
-                    <p>Conteudos sobre alimentacao, glicemia, insulina, atividade fisica e cuidados diarios.</p>
+                    <h3>V&iacute;deos educativos</h3>
+                    <p>Conte&uacute;dos sobre alimenta&ccedil;&atilde;o, glicemia, insulina, atividade f&iacute;sica e cuidados di&aacute;rios.</p>
                 </div>
             </a>
 
             <a href="{{ route('alimentacao_glicemia', [], false) }}" class="menu-card">
                 <div class="card-icon bg-green"><i class="fas fa-apple-whole"></i></div>
                 <div class="card-info">
-                    <h3>Alimentacao segura</h3>
-                    <p>Prefira refeicoes equilibradas, evite excesso de acucar e siga orientacao profissional.</p>
+                    <h3>Alimenta&ccedil;&atilde;o segura</h3>
+                    <p>Prefira refei&ccedil;&otilde;es equilibradas, evite excesso de a&ccedil;&uacute;car e siga orienta&ccedil;&atilde;o profissional.</p>
                 </div>
             </a>
 
@@ -282,18 +282,18 @@
                 <div class="card-icon bg-yellow"><i class="fas fa-triangle-exclamation"></i></div>
                 <div class="card-info">
                     <h3>Sinais de alerta</h3>
-                    <p>Tontura, suor frio, visao embacada, muita sede ou feridas que nao cicatrizam exigem atencao.</p>
+                    <p>Tontura, suor frio, vis&atilde;o emba&ccedil;ada, muita sede ou feridas que n&atilde;o cicatrizam exigem aten&ccedil;&atilde;o.</p>
                 </div>
             </a>
         </div>
 
         <h2 class="section-title">Checklist de hoje</h2>
         <section class="checklist">
-            <label class="check-item"><input type="checkbox" data-check="agua"><div>Bebi agua<br><span>Evitei refrigerante e bebida muito doce.</span></div></label>
-            <label class="check-item"><input type="checkbox" data-check="remedio"><div>Tomei meus remedios<br><span>Segui o horario orientado pela equipe de saude.</span></div></label>
+            <label class="check-item"><input type="checkbox" data-check="agua"><div>Bebi &aacute;gua<br><span>Evitei refrigerante e bebida muito doce.</span></div></label>
+            <label class="check-item"><input type="checkbox" data-check="remedio"><div>Tomei meus rem&eacute;dios<br><span>Segui o hor&aacute;rio orientado pela equipe de sa&uacute;de.</span></div></label>
             <label class="check-item"><input type="checkbox" data-check="glicemia"><div>Medi ou observei a glicemia<br><span>Anotei o valor, se usei aparelho.</span></div></label>
-            <label class="check-item"><input type="checkbox" data-check="pes"><div>Olhei meus pes<br><span>Observei cortes, bolhas, rachaduras ou vermelhidao.</span></div></label>
-            <label class="check-item"><input type="checkbox" data-check="alimentacao"><div>Fiz refeicoes equilibradas<br><span>Inclui verduras, proteina e controlei carboidratos.</span></div></label>
+            <label class="check-item"><input type="checkbox" data-check="pes"><div>Olhei meus p&eacute;s<br><span>Observei cortes, bolhas, rachaduras ou vermelhid&atilde;o.</span></div></label>
+            <label class="check-item"><input type="checkbox" data-check="alimentacao"><div>Fiz refei&ccedil;&otilde;es equilibradas<br><span>Inclu&iacute; verduras, prote&iacute;na e controlei carboidratos.</span></div></label>
             <div class="checklist-actions">
                 <button type="button" class="save-checklist" id="save-checklist">Salvar checklist</button>
                 <button type="button" class="undo-checklist" id="undo-checklist">Desfazer salvação</button>
@@ -303,26 +303,26 @@
 
         <h2 class="section-title">Cuidados importantes</h2>
         <div class="tips-grid">
-            <div class="tip-card"><strong><i class="fas fa-droplet"></i> Hidratacao</strong><span>Beba agua e evite refrigerantes e bebidas muito doces.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-shoe-prints"></i> Pes</strong><span>Observe cortes, bolhas, rachaduras e procure atendimento se nao melhorar.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-bowl-food"></i> Prato</strong><span>Inclua verduras, proteinas e controle porcoes de arroz, massas e doces.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-vial"></i> Glicemia</strong><span>Faca acompanhamento na UBS e siga a orientacao do profissional de saude.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-pills"></i> Remedios</strong><span>Tome nos horarios combinados e nao pare insulina ou comprimidos por conta propria.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-person-walking"></i> Movimento</strong><span>Caminhadas leves ajudam no controle da glicemia, quando liberadas pela equipe de saude.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-user-doctor"></i> Consultas</strong><span>Leve exames, receitas e anotacoes da glicemia para facilitar o atendimento.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-droplet"></i> Hidrata&ccedil;&atilde;o</strong><span>Beba &aacute;gua e evite refrigerantes e bebidas muito doces.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-shoe-prints"></i> P&eacute;s</strong><span>Observe cortes, bolhas, rachaduras e procure atendimento se n&atilde;o melhorar.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-bowl-food"></i> Prato</strong><span>Inclua verduras, prote&iacute;nas e controle por&ccedil;&otilde;es de arroz, massas e doces.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-vial"></i> Glicemia</strong><span>Fa&ccedil;a acompanhamento na UBS e siga a orienta&ccedil;&atilde;o do profissional de sa&uacute;de.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-pills"></i> Rem&eacute;dios</strong><span>Tome nos hor&aacute;rios combinados e n&atilde;o pare insulina ou comprimidos por conta pr&oacute;pria.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-person-walking"></i> Movimento</strong><span>Caminhadas leves ajudam no controle da glicemia, quando liberadas pela equipe de sa&uacute;de.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-user-doctor"></i> Consultas</strong><span>Leve exames, receitas e anota&ccedil;&otilde;es da glicemia para facilitar o atendimento.</span></div>
             <div class="tip-card"><strong><i class="fas fa-bed"></i> Sono</strong><span>Dormir bem ajuda no controle do apetite, do estresse e da glicose no sangue.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-heart-pulse"></i> Pressao</strong><span>Acompanhe a pressao arterial, pois diabetes e pressao alta precisam de cuidado junto.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-eye"></i> Olhos</strong><span>Visao embacada ou piora para enxergar precisa ser avisada na consulta.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-tooth"></i> Boca</strong><span>Cuide dos dentes e gengivas; inflamacoes podem dificultar o controle da glicemia.</span></div>
-            <div class="tip-card"><strong><i class="fas fa-triangle-exclamation"></i> Alerta</strong><span>Desmaio, confusao, ferida grave ou mal-estar intenso precisam de atendimento rapido.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-heart-pulse"></i> Press&atilde;o</strong><span>Acompanhe a press&atilde;o arterial, pois diabetes e press&atilde;o alta precisam de cuidado junto.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-eye"></i> Olhos</strong><span>Vis&atilde;o emba&ccedil;ada ou piora para enxergar precisa ser avisada na consulta.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-tooth"></i> Boca</strong><span>Cuide dos dentes e gengivas; inflama&ccedil;&otilde;es podem dificultar o controle da glicemia.</span></div>
+            <div class="tip-card"><strong><i class="fas fa-triangle-exclamation"></i> Alerta</strong><span>Desmaio, confus&atilde;o, ferida grave ou mal-estar intenso precisam de atendimento r&aacute;pido.</span></div>
         </div>
     </main>
 
     <nav class="bottom-nav">
-        <a href="{{ route('principal', [], false) }}" class="nav-item active"><i class="fas fa-home"></i><span>Inicio</span></a>
+        <a href="{{ route('principal', [], false) }}" class="nav-item active"><i class="fas fa-home"></i><span>In&iacute;cio</span></a>
         <a href="{{ route('meu_controle', [], false) }}" class="nav-item"><i class="fas fa-clipboard-check"></i><span>Controle</span></a>
         <a href="{{ route('detalhes_saude', [], false) }}" class="nav-item"><i class="fas fa-map-pin"></i><span>UBS</span></a>
-        <a href="https://www.youtube.com/results?search_query=diabetes+cuidados" target="_blank" class="nav-item"><i class="fas fa-video"></i><span>Videos</span></a>
+        <a href="https://www.youtube.com/results?search_query=diabetes+cuidados" target="_blank" class="nav-item"><i class="fas fa-video"></i><span>V&iacute;deos</span></a>
     </nav>
 
     <script>

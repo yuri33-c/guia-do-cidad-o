@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidar+ Enfermagem</title>
+    <style>
+        /* Variáveis de cores usadas em todo o projeto */
+        :root {
+            --ink: #183238;
+            --muted: #5d7177;
+            --green: #157a6e;
+            --green-dark: #0f5f57;
+            --mint: #e8f7f3;
+            --red: #c84444;
+            --amber: #d78a21;
+            --blue: #256f9f;
+            --bg: #f6fbfa;
+            --card: #ffffff;
+            --line: #d7e8e5;
+        }
+
+        /* Evita que padding e bordas quebrem o tamanho dos elementos */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* Cabeçalho fixo com navegação para as seções do app */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.94);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            color: var(--green-dark);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            background: var(--green);
+            color: #fff;
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            padding: 8px 10px;
+            border-radius: 8px;
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--green-dark);
+            background: var(--mint);
+        }
+
+        /* Tela inicial com imagem de fundo e chamada principal do projeto */
+        .hero {
+            min-height: 540px;
+            display: grid;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(11, 68, 64, 0.86), rgba(11, 68, 64, 0.56), rgba(11, 68, 64, 0.22)),
+                url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1800&q=80") center/cover;
+            color: #fff;
+        }
+
+        /* Largura padrão para centralizar o conteúdo das seções */
+        .hero-content,
+        .section-inner {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .hero-copy {
+            width: min(650px, 100%);
+            padding: 74px 0;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 13px;
+            font-weight: 800;
+            color: #c8f4e9;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(36px, 6vw, 72px);
+            line-height: 0.98;
+            letter-spacing: 0;
+        }
+
+        .hero p {
+            margin: 22px 0 28px;
+            font-size: 19px;
+            max-width: 600px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* Botões de ação da tela inicial */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .button.primary {
+            background: #fff;
+            color: var(--green-dark);
+        }
+
+        .button.secondary {
+            border-color: rgba(255, 255, 255, 0.72);
+            color: #fff;
+        }
+
+        section {
+            padding: 64px 0;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: end;
+            margin-bottom: 26px;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.08;
+        }
+
+        .section-title p {
+            margin: 0;
+            max-width: 460px;
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .grid.two {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        /* Cards usados para sintomas, cuidados, vídeos e locais de atendimento */
+        .card,
+        .note,
+        .video-card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            box-shadow: 0 12px 31px rgba(20, 72, 67, 0.08);
+        }
+
+        .card {
+            padding: 22px;
+        }
+
+        .card h3 {
+            margin: 0 0 12px;
+            font-size: 22px;
+            line-height: 1.18;
+        }
+
+        .card ul,
+        .care-list {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .card li + li,
+        .care-list li + li {
+            margin-top: 8px;
+        }
+
+        .tag {
+            display: inline-flex;
+            margin-bottom: 14px;
+            padding: 4px 9px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .tag.red {
+            background: var(--red);
+        }
+
+        .tag.amber {
+            background: var(--amber);
+        }
+
+        .tag.blue {
+            background: var(--blue);
+        }
+
+        .tag.green {
+            background: var(--green);
+        }
+
+        /* Faixa de emergência com destaque para o telefone do SAMU */
+        .alert-band {
+            background: #fff1ef;
+            border-top: 1px solid #ffd1cb;
+            border-bottom: 1px solid #ffd1cb;
+        }
+
+        .emergency {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .emergency h2 {
+            margin: 0 0 10px;
+            color: #8d2929;
+        }
+
+        .emergency p {
+            margin: 0;
+            color: #633737;
+        }
+
+        .phone {
+            display: grid;
+            place-items: center;
+            width: 132px;
+            height: 132px;
+            border-radius: 8px;
+            background: var(--red);
+            color: #fff;
+            font-size: 40px;
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        /* Bloco dividido usado na seção de alimentação */
+        .split {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .photo {
+            min-height: 430px;
+            border-radius: 8px;
+            background: url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80") center/cover;
+        }
+
+        .meal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .meal {
+            padding: 16px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .meal strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--green-dark);
+        }
+
+        .meal span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Estrutura dos vídeos educativos incorporados */
+        .video-card {
+            overflow: hidden;
+        }
+
+        .video-frame {
+            aspect-ratio: 16 / 9;
+            background: #d8e7e5;
+            display: grid;
+            place-items: center;
+            padding: 22px;
+            text-align: center;
+            color: #fff;
+            background:
+                linear-gradient(135deg, rgba(15, 95, 87, 0.92), rgba(37, 111, 159, 0.86)),
+                url("https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80") center/cover;
+        }
+
+        .video-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 12px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--green-dark);
+            font-size: 34px;
+            font-weight: 900;
+        }
+
+        .video-frame strong {
+            display: block;
+            font-size: 22px;
+            line-height: 1.15;
+        }
+
+        .video-frame span {
+            display: block;
+            margin-top: 8px;
+            font-weight: 700;
+            color: #e9fffa;
+        }
+
+        .local-video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            background: #163137;
+        }
+
+        .video-card h3 {
+            margin: 16px 16px 6px;
+        }
+
+        .video-card p {
+            margin: 0 16px 18px;
+            color: var(--muted);
+        }
+
+        .video-link {
+            display: inline-flex;
+            margin: 0 16px 18px;
+            min-height: 38px;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: var(--green);
+            color: #fff;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .video-link.alt {
+            background: var(--blue);
+            margin-left: 0;
+        }
+
+        .note {
+            padding: 20px;
+            color: var(--muted);
+            border-left: 6px solid var(--green);
+        }
+
+        /* Rodapé com identificação do material educativo */
+        .footer {
+            padding: 30px 0;
+            color: var(--muted);
+            background: #eaf5f2;
+            border-top: 1px solid var(--line);
+        }
+
+        /* Ajustes para celulares e tablets */
+        @media (max-width: 860px) {
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 14px 0;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+            }
+
+            .section-title,
+            .emergency,
+            .split {
+                grid-template-columns: 1fr;
+                display: grid;
+            }
+
+            .grid,
+            .grid.two,
+            .meal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phone {
+                width: 100%;
+                height: 78px;
+                font-size: 32px;
+            }
+
+            .photo {
+                min-height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho com nome do aplicativo e links para navegar na página -->
+    <header class="topbar">
+        <nav class="nav" aria-label="Navegação principal">
+            <a class="brand" href="#inicio">
+                <span class="brand-mark">+</span>
+                <span>Cuidar+ Enfermagem</span>
+            </a>
+            
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <!-- Apresentação do projeto e objetivo principal do app -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">Projeto de enfermagem para educação em saúde</p>
+                    <h1>Cuidado diário para diabetes e hipertensão</h1>
+                    <p>
+                        Um guia simples para pacientes e familiares acompanharem sintomas,
+                        sinais de alerta, alimentação, prevenção de complicações e locais de atendimento.
+                    </p>
+                    <div class="actions">
+                        <a class="button primary" href="#alertas">Ver sinais de alerta</a>
+                        <a class="button secondary" href="#cuidados">Cuidados de rotina</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Área de alerta para situações que precisam de urgência -->
+        <section class="alert-band" id="alertas">
+            <div class="section-inner emergency">
+                <div>
+                    <h2>Procure urgência se houver sinal grave</h2>
+                    <p>
+                        Dor no peito, falta de ar, desmaio, confusão mental, perda de força,
+                        alteração na fala, dor de cabeça muito forte, glicemia muito alta com vômitos
+                        ou sonolência não devem esperar consulta marcada.
+                    </p>
+                </div>
+                <a class="phone" href="tel:192" aria-label="Ligar para o SAMU no número 192">192</a>
+            </div>
+        </section>
+
+        <!-- Sintomas importantes para diabetes, hipoglicemia e hipertensão -->
+        <section id="sintomas">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>Sinais e sintomas para acompanhar</h2>
+                    <p>Essas informações ajudam o paciente a perceber mudanças e buscar orientação no momento certo.</p>
+                </div>
+
+                <div class="grid">
+                    <article class="card">
+                        <span class="tag red">Diabetes descompensado</span>
+                        <h3>Glicose alta</h3>
+                        <ul>
+                            <li>Muita sede e boca seca.</li>
+                            <li>Urinar muitas vezes, inclusive à noite.</li>
+                            <li>Cansaço, visão embaçada e perda de peso sem explicação.</li>
+                            <li>Feridas que demoram para cicatrizar ou infecções frequentes.</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <span class="tag amber">Glicose baixa</span>
+                        <h3>Hipoglicemia</h3>
+                        <ul>
+                            <li>Tremores, suor frio, fome intensa e palpitações.</li>
+                            <li>Tontura, fraqueza, irritação ou sonolência.</li>
+                            <li>Confusão, desmaio ou convulsão exigem atendimento imediato.</li>
+                            <li>Quem usa insulina deve seguir o plano orientado pela equipe de saúde.</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <span class="tag blue">Pressão alta</span>
+                        <h3>Hipertensão</h3>
+                        <ul>
+                            <li>Muitas pessoas não sentem nada, por isso medir a pressão é essencial.</li>
+                            <li>Quando sobe muito, pode causar dor de cabeça, tontura e visão embaçada.</li>
+                            <li>Dor no peito, falta de ar ou alteração na fala são sinais de emergência.</li>
+                            <li>Pressão igual ou acima de 140/90 mmHg precisa de avaliação profissional.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Orientações de autocuidado e prevenção de complicações -->
+        <section id="cuidados">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>Cuidados de enfermagem no dia a dia</h2>
+                    <p>Rotinas simples ajudam a reduzir riscos e deixam a consulta mais produtiva.</p>
+                </div>
+
+                <div class="grid two">
+                    <article class="card">
+                        <span class="tag green">Autocuidado</span>
+                        <h3>Checklist do paciente</h3>
+                        <ul class="care-list">
+                            <li>Tomar os medicamentos no horário prescrito, sem interromper por conta própria.</li>
+                            <li>Medir glicemia e pressão conforme orientação da unidade de saúde.</li>
+                            <li>Anotar resultados, sintomas, alimentação diferente e episódios de tontura ou mal-estar.</li>
+                            <li>Levar cartão do SUS, receitas, exames e anotações em todas as consultas.</li>
+                            <li>Manter vacinas, consultas e exames periódicos em dia.</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <span class="tag green">Pés diabéticos</span>
+                        <h3>Prevenção de feridas</h3>
+                        <ul class="care-list">
+                            <li>Examinar os pés todos os dias, inclusive entre os dedos e a sola.</li>
+                            <li>Lavar com água e sabonete, secar bem e hidratar a pele, evitando creme entre os dedos.</li>
+                            <li>Não andar descalço e usar calçados confortáveis, sem apertar.</li>
+                            <li>Não cortar calos ou unhas encravadas em casa; procurar a UBS.</li>
+                            <li>Ferida, bolha, vermelhidão, inchaço ou secreção precisam de avaliação rápida.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dicas de alimentação para ajudar no controle da glicose e pressão -->
+        <section id="alimentacao">
+            <div class="section-inner split">
+                <div class="photo" role="img" aria-label="Mesa com alimentos saudáveis, frutas, legumes e grãos"></div>
+                <div>
+                    <div class="section-title">
+                        <h2>Alimentação para controlar melhor</h2>
+                    </div>
+                    <div class="meal-grid">
+                        <div class="meal">
+                            <strong>Prefira comida de verdade</strong>
+                            <span>Arroz, feijão, legumes, verduras, frutas, ovos, carnes magras e alimentos minimamente processados.</span>
+                        </div>
+                        <div class="meal">
+                            <strong>Monte o prato com equilíbrio</strong>
+                            <span>Metade com verduras e legumes, um quarto com carboidrato e um quarto com proteína.</span>
+                        </div>
+                        <div class="meal">
+                            <strong>Reduza açúcar e ultraprocessados</strong>
+                            <span>Evite refrigerantes, doces, biscoitos recheados, embutidos e produtos muito salgados.</span>
+                        </div>
+                        <div class="meal">
+                            <strong>Cuide do sal e da hidratação</strong>
+                            <span>Use temperos naturais, beba água e converse com a equipe se houver restrição de líquidos.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vídeos educativos para complementar as orientações do aplicativo -->
+        <section id="videos">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>Vídeos de orientação</h2>
+                    <p>Espaço para aulas rápidas, demonstrações de cuidado e materiais educativos para pacientes.</p>
+                </div>
+
+                <div class="grid">
+                    <article class="video-card">
+                        <div class="video-frame">
+                            <video class="local-video" controls preload="metadata">
+                                <source src="assets/videos/cuidados-enfermagem.mp4" type="video/mp4">
+                                Seu navegador não conseguiu abrir este vídeo.
+                            </video>
+                        </div>
+                        <h3>Vídeo do projeto</h3>
+                        <p>Vídeo educativo enviado para o app, salvo junto com o site para funcionar sem depender de player externo.</p>
+                    </article>
+
+                    <article class="video-card">
+                        <div class="video-frame">
+                            <div>
+                                <div class="video-icon">▶</div>
+                                <strong>Diabetes</strong>
+                                <span>Explicações de criadores de saúde</span>
+                            </div>
+                        </div>
+                        <h3>Diabetes: sintomas e cuidados</h3>
+                        <p>Busca pronta no YouTube para vídeos sobre sinais, tratamento, alimentação e rotina de cuidado para diabetes.</p>
+                        <a class="video-link" href="https://www.youtube.com/results?search_query=diabetes+sintomas+cuidados+alimentação+Dr+Ajuda" target="_blank" rel="noopener">Abrir no YouTube</a>
+                    </article>
+
+                    <article class="video-card">
+                        <div class="video-frame">
+                            <div>
+                                <div class="video-icon">▶</div>
+                                <strong>Hipertensão</strong>
+                                <span>Pressão alta no YouTube</span>
+                            </div>
+                        </div>
+                        <h3>Hipertensão arterial</h3>
+                        <p>Busca pronta no YouTube para vídeos sobre pressão alta, riscos, prevenção e cuidados de rotina.</p>
+                        <a class="video-link" href="https://www.youtube.com/results?search_query=hipertensão+pressão+alta+cuidados+enfermagem+youtuber" target="_blank" rel="noopener">Abrir no YouTube</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guia de encaminhamento: UBS, UPA ou emergência -->
+        <section id="onde-procurar">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>Onde procurar ajuda</h2>
+                    <p>O paciente deve saber qual serviço procurar conforme a gravidade dos sintomas.</p>
+                </div>
+
+                <div class="grid">
+                    <article class="card">
+                        <span class="tag green">UBS</span>
+                        <h3>Unidade Básica de Saúde</h3>
+                        <ul>
+                            <li>Acompanhamento de rotina, renovação de receita e orientações.</li>
+                            <li>Aferição de pressão, avaliação dos pés e solicitação de exames.</li>
+                            <li>Encaminhamento para nutricionista, médico ou serviço especializado quando necessário.</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <span class="tag amber">UPA</span>
+                        <h3>Pronto atendimento</h3>
+                        <ul>
+                            <li>Mal-estar importante, pressão muito alta com sintomas ou glicemia alterada persistente.</li>
+                            <li>Feridas infectadas, febre, vômitos ou sinais de desidratação.</li>
+                            <li>Situações que não podem aguardar consulta na UBS.</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <span class="tag red">Emergência</span>
+                        <h3>SAMU 192</h3>
+                        <ul>
+                            <li>Dor no peito, falta de ar, desmaio ou confusão mental.</li>
+                            <li>Fraqueza em um lado do corpo, boca torta ou dificuldade para falar.</li>
+                            <li>Convulsão, sonolência intensa ou piora rápida do estado geral.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <p class="note">
+                    Este app é educativo e não substitui avaliação de médico, enfermeiro ou nutricionista.
+                    As metas de glicemia, pressão, alimentação e medicamentos devem ser individualizadas pela equipe de saúde.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div class="note" style="margin: 0 16px 32px; border-color: var(--red);">
+        Em caso de dúvida, piora dos sintomas ou necessidade de orientação, procure a UBS ou ligue para o SAMU.
+    </div>
+
+    
+    <!-- Rodapé com identificação final do projeto -->
+    <footer class="footer">
+        <div class="section-inner">
+            <strong>Cuidar+ Enfermagem</strong> - material educativo para projeto de diabetes e hipertensão.
+        </div>
+    </footer>
+
+    <script>
+        // Evita que o navegador reabra a página no último ponto rolado.
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+
+        window.addEventListener('pageshow', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>
